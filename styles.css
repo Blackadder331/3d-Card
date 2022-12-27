@@ -1,0 +1,22 @@
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Add a 3D perspective to the parent element */
+    transform-style: preserve-3d; /* Enable 3D children elements */
+    transition: transform 0.5s; /* Add a smooth transition to the transformation */
+    background: gray;
+    padding: 5rem;
+    margin: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .card:hover {
+    transform: rotateX(20deg) rotateY(15deg); /* Tilt the card when hovered */
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
