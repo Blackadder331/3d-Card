@@ -1,3 +1,11 @@
+body {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .card {
     width: 300px;
     height: 400px;
@@ -5,18 +13,48 @@
     transform-style: preserve-3d; /* Enable 3D children elements */
     transition: transform 0.5s; /* Add a smooth transition to the transformation */
     background: gray;
-    padding: 5rem;
+    /* padding: 5rem; */
     margin: 3rem;
     text-align: center;
     display: flex;
     justify-content:center;
-    align-items: center;
-  }
+    align-items: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #0d0d0d;
+    border-radius: 30px;
+}
   
-  .card:hover {
+.card:hover {
     transform: rotateX(20deg) rotateY(15deg); /* Tilt the card when hovered */
-  }
-  .container {
+}
+
+.card-inner {
+    background-color: #232323;
+    border-radius: 0 0 30px 30px;
+    padding: .5rem 2rem;
+    color: aliceblue;
+    width: 101%;
+    margin-bottom: -2px;
+    margin-right: -2px;
+    margin-left: -2px;
+}
+
+.container {
     display: flex;
     justify-content: space-around;
-  }
+}
+
+#card-1 {
+    background-image: url(./images/1.png);
+
+}
+
+#card-2 {
+    background-image: url(./images/2.png);
+}
+
+#card-3 {
+    background-image: url(./images/3.png);
+}
