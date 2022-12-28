@@ -13,7 +13,9 @@ html, body {
     font-size: 15px; 
     /* ^ 15px rem base number for type scaling*/
     color: white;
-    background-color: #222222;
+    /* background-color: #222222; */
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 h1 {
@@ -53,7 +55,17 @@ table:not(th){
     font-weight: 200;
 }
 
-
+.wrapper {
+    /* z-index: -20; */
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Add a 3D perspective to the parent element */
+}
 
 .skull {
     color: white;
@@ -69,21 +81,23 @@ table:not(th){
 }
 
 body {
-    background-color: #0d0d0d;
+    /* background-color: #0d0d0d; */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-   background: rgb(165,219,241);
-background: linear-gradient(180deg, rgba(165,219,241,1) 30%, rgb(14, 17, 21) 93%);
-}
+    min-width: 100vw;
+    
+
+
+  }
 
 .card {
     width: 300px;
     height: 400px;
     perspective: 1000px; /* Add a 3D perspective to the parent element */
     transform-style: preserve-3d; /* Enable 3D children elements */
-    transition: transform 0.5s; /* Add a smooth transition to the transformation */
+    transition: transform 0.4s ease; /* Add a smooth transition to the transformation */
     background: gray;
     /* padding: 5rem; */
     margin: 5rem;
@@ -107,10 +121,13 @@ background: linear-gradient(180deg, rgba(165,219,241,1) 30%, rgb(14, 17, 21) 93%
     box-shadow:  10px 10px 60px rgba(9, 14, 34, 0.8) ,
              -10px -10px 60px  rgba(122, 214, 251, 0.8);
     box-shadow: 0.5;
+    /* z-index: 150; */
 }
   
 .card:hover {
-    transform: rotateX(20deg) rotateY(15deg); /* Tilt the card when hovered */
+    transform: rotateX(-20deg) rotateY(35deg); /* Tilt the card when hovered */
+    scale: 1.05;
+
 }
 
 .card-inner {
@@ -149,10 +166,22 @@ background: linear-gradient(180deg, rgba(165,219,241,1) 30%, rgb(14, 17, 21) 93%
     background-image: url(./images/3.png);
 }
 
+#canv {
 
-
-
-@media only screen and (max-width: 900px) {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+canvas {
+    position: absolute;
+    z-index: -1;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #222222;
+    background: rgb(165,219,241);
+    background: linear-gradient(180deg, rgba(165,219,241,1) 30%, rgb(14, 17, 21) 93%);
+  }
+  
+@media only screen and (max-width: 1400px) {
     .container {
         flex-direction: column;
         margin: 2rem 1rem 2rem 1rem;
