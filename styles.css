@@ -100,7 +100,7 @@ body {
     transition: transform 0.4s ease; /* Add a smooth transition to the transformation */
     background: gray;
     /* padding: 5rem; */
-    margin: 5rem;
+    margin: 4rem;
     text-align: center;
     display: flex;
     justify-content:center;
@@ -151,6 +151,8 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15rem;
 }
 
 #card-1 {
@@ -164,6 +166,19 @@ body {
 
 #card-3 {
     background-image: url(./images/3.png);
+}
+
+#card-4 {
+    background-image: url(./images/4.png);
+
+}
+
+#card-5 {
+    background-image: url(./images/5.png);
+}
+
+#card-6 {
+    background-image: url(./images/6.png);
 }
 
 #canv {
@@ -185,6 +200,7 @@ canvas {
     .container {
         flex-direction: column;
         margin: 2rem 1rem 2rem 1rem;
+        margin: 0;
     }
     .card {
         margin: 2rem;
